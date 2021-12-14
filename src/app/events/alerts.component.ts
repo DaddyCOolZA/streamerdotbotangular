@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventQueueData, GiftData, MessageData, RaidData, StreamerBotMessage, SubData } from 'src/app/models/alerts.model';
+import { EventQueueData, GiftSubData, MessageData, RaidData, StreamerBotMessage, SubData } from 'src/app/models/alerts.model';
 import { StreamdotbotService } from 'src/app/services/streamdotbot.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class AlertsComponent implements OnInit {
   currentEvent = '';
   eventQue: EventQueueData[] = [];
   eventBusy = true;
-  eventData: MessageData | SubData | GiftData | RaidData | any;
+  eventData: MessageData | SubData | GiftSubData | RaidData | any;
   constructor(private sbsocket: StreamdotbotService) { }
 
   ngOnInit(): void {

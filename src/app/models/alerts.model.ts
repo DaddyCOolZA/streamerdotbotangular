@@ -39,13 +39,13 @@ export interface CreditsModel {
 
 export interface EventQueueData {
     type: string,
-    data: MessageData | SubData | GiftData | RaidData | any;
+    data: MessageData | SubData | GiftSubData | RaidData | GiftBombData | FollowData | CheerData | any;
 }
 
 export interface StreamerBotMessage {
     timeStamp: Date;
     event: Event;
-    data: MessageData | SubData | GiftData | RaidData | any;
+    data: MessageData | SubData | GiftSubData | RaidData | GiftBombData | FollowData | CheerData | any;
 }
 
 export interface MessageData {
@@ -74,69 +74,17 @@ export interface TwitchMessage {
 }
 
 export interface CheerData {
-    displayName: string;
-    profileImage: string;
-    role: number;
-    userId: number;
-    userName: string;
-    viewerCount: number;
+    message?: TwitchMessage;
 }
 
 export interface FollowData {
     displayName: string;
-    profileImage: string;
-    role: number;
+    isTest: boolean;
     userId: number;
     userName: string;
-    viewerCount: number;
 }
+
 export interface GiftSubData {
-    displayName: string;
-    profileImage: string;
-    role: number;
-    userId: number;
-    userName: string;
-    viewerCount: number;
-}
-export interface GiftBombData {
-    displayName: string;
-    profileImage: string;
-    role: number;
-    userId: number;
-    userName: string;
-    viewerCount: number;
-}
-
-export interface RaidData {
-    displayName: string;
-    profileImage: string;
-    role: number;
-    userId: number;
-    userName: string;
-    viewerCount: number;
-}
-
-export interface ReSubData {
-    displayName: string;
-    profileImage: string;
-    role: number;
-    userId: number;
-    userName: string;
-    viewerCount: number;
-}
-
-export interface SubData {
-    subTier: number;
-    color: string;
-    emotes: any[];
-    message: string;
-    userId: number;
-    userName: string;
-    displayName: string;
-    role: number;
-}
-
-export interface GiftData {
     isAnonymous: boolean;
     totalSubsGifted: number;
     cumulativeMonths: number;
@@ -152,6 +100,51 @@ export interface GiftData {
     displayName: string;
     role: number;
 }
+
+export interface GiftBombData {
+    displayName: string;
+    profileImage: string;
+    role: number;
+    userId: number;
+    userName: string;
+    viewerCount: number;
+    gifts: number;
+    isAnonymous: boolean;
+    subTier: number;
+    totalGifts: number;
+}
+
+export interface RaidData {
+    displayName: string;
+    profileImage: string;
+    role: number;
+    userId: number;
+    userName: string;
+    viewerCount: number;
+}
+
+export interface SubData {
+    displayName: string;
+    profileImage: string;
+    role: number;
+    userId: number;
+    userName: string;
+    viewerCount: number;
+}
+
+export interface ReSubData {
+    subTier: number;
+    color: string;
+    emotes: any[];
+    message: string;
+    userId: number;
+    userName: string;
+    displayName: string;
+    role: number;
+    shareStreak: boolean;
+    streakMonths: number;
+}
+
 
 export interface CheerEmote {
     bits: number;
