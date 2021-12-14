@@ -90,8 +90,33 @@ export interface FollowData {
     userName: string;
     viewerCount: number;
 }
+export interface GiftSubData {
+    displayName: string;
+    profileImage: string;
+    role: number;
+    userId: number;
+    userName: string;
+    viewerCount: number;
+}
+export interface GiftBombData {
+    displayName: string;
+    profileImage: string;
+    role: number;
+    userId: number;
+    userName: string;
+    viewerCount: number;
+}
 
 export interface RaidData {
+    displayName: string;
+    profileImage: string;
+    role: number;
+    userId: number;
+    userName: string;
+    viewerCount: number;
+}
+
+export interface ReSubData {
     displayName: string;
     profileImage: string;
     role: number;

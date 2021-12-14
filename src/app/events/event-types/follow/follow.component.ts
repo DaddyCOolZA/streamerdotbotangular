@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FollowData } from 'src/app/models/alerts.model';
 
 @Component({
   selector: 'app-follow',

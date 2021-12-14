@@ -1,0 +1,21 @@
+<app-cheer *ngIf="currentEvent == 'Cheer'"
+           [eventData]="eventData"
+           (eventDone)="completeEvent()"></app-cheer>
+<app-follow *ngIf="currentEvent == 'Follow'"
+            [eventData]="eventData"
+            (eventDone)="completeEvent()"></app-follow>
+<app-giftbomb *ngIf="currentEvent == 'GiftBomb'"
+              [eventData]="eventData"
+              (eventDone)="completeEvent()"></app-giftbomb>
+<app-giftsub *ngIf="currentEvent == 'GiftSub'"
+             [eventData]="eventData"
+             (eventDone)="completeEvent()"></app-giftsub>
+<app-raid *ngIf="currentEvent == 'Raid'"
+          [eventData]="eventData"
+          (eventDone)="completeEvent()"></app-raid>
+<app-resub *ngIf="currentEvent == 'ReSub'"
+           [eventData]="eventData"
+           (eventDone)="completeEvent()"></app-resub>
+<app-sub *ngIf="currentEvent == 'Sub'"
+         [eventData]="eventData"
+         (eventDone)="completeEvent()"></app-sub>

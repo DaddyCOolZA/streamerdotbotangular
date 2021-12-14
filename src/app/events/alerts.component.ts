@@ -3,11 +3,11 @@ import { EventQueueData, GiftData, MessageData, RaidData, StreamerBotMessage, Su
 import { StreamdotbotService } from 'src/app/services/streamdotbot.service';
 
 @Component({
-  selector: 'app-events',
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.scss']
+  selector: 'app-alerts',
+  templateUrl: './alerts.component.html',
+  styleUrls: ['./alerts.component.scss']
 })
-export class EventsComponent implements OnInit {
+export class AlertsComponent implements OnInit {
 
   currentEvent = '';
   eventQue: EventQueueData[] = [];
@@ -17,6 +17,7 @@ export class EventsComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscribeToEvents();
+    this.listen();
   }
 
   subscribeToEvents() {
@@ -32,7 +33,7 @@ export class EventsComponent implements OnInit {
             "GiftBomb",
             "GiftSub",
             "Raid",
-            "Resub",
+            "ReSub",
             "Sub"
           ]
         }

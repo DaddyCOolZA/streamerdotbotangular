@@ -1,0 +1,69 @@
+<div id="credits-wrapper"
+     *ngIf="creditsFetched">
+  <div class="section-container"
+       *ngIf="credits.hypeTrain.conductor.length > 0">
+    <h3>HYPETRAIN!</h3>
+    <div class="section-sub-container">
+      <h4>Conductors</h4>
+      <ul>
+        <li *ngFor="let conductor of credits.hypeTrain.conductor">{{conductor}}</li>
+      </ul>
+    </div>
+    <div class="section-sub-container">
+      <h4>Passengers</h4>
+      <ul>
+        <li *ngFor="let passenger of credits.hypeTrain.contributors">{{passenger}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-container"
+       *ngIf="credits.events.cheers.length > 0">
+    <h3>CHEERS</h3>
+    <h4>#1 Fo' dah month - <span>{{credits.top.bits?.month}}</span></h4>
+    <ul>
+      <li *ngFor="let cheerer of credits.events.cheers">{{cheerer}}</li>
+    </ul>
+  </div>
+
+  <div class="section-container"
+       *ngIf="credits.events.subs?.length > 0 || credits.events.giftsubs.length > 0 || credits.events.resubs.length >0">
+    <h3>SUBS</h3>
+    <div class="section-sub-container"
+         *ngIf="credits.events.subs?.length > 0">
+      <h4>New Subs- Welcome to the family!</h4>
+      <ul>
+        <li *ngFor="let sub of credits.events.subs">{{sub}}</li>
+      </ul>
+    </div>
+    <div class="section-sub-container"
+         *ngIf="credits.events.resubs.length > 0">
+      <h4>Resubs</h4>
+      <ul>
+        <li *ngFor="let resubber of credits.events.resubs">{{resubber}}</li>
+      </ul>
+    </div>
+    <div class="section-sub-container"
+         *ngIf="credits.events.giftsubs.length > 0">
+      <h4>Sub Gifters</h4>
+      <ul>
+        <li *ngFor="let gifter of credits.events.giftsubs">{{gifter}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-container"
+       *ngIf="credits.events.follows.length > 0">
+    <h3>FOLLOWS</h3>
+    <ul>
+      <li *ngFor="let follower of credits.events.follows">{{follower}}</li>
+    </ul>
+  </div>
+  <div class="section-container"
+       *ngIf="credits.events.raided.length > 0">
+    <h3>RAIDS</h3>
+    <ul>
+      <li *ngFor="let raider of credits.events.raided">{{raider}}</li>
+    </ul>
+  </div>
+</div>
