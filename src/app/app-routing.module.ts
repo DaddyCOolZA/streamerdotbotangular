@@ -4,7 +4,7 @@ import { CreditsComponent } from './credits/credits.component';
 import { AlertsComponent } from './events/alerts.component';
 
 const routes: Routes = [
-  { path: "alerts", component: AlertsComponent }
+  { path: "alerts", component: AlertsComponent },
   { path: "credits", component: CreditsComponent }
 ];
 

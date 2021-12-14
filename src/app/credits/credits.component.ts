@@ -26,7 +26,7 @@ export class CreditsComponent implements OnInit {
       var data: CreditsModel = JSON.parse(event.data);
       console.log(data);
       this.credits = data;
-      if (data["id"] == "credits") {
+      if (data.id == "credits") {
         this.creditsFetched = true;
       }
     }
