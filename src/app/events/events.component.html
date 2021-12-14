@@ -1,0 +1,11 @@
+<app-cheer *ngIf="currentEvent == 'Cheer'"
+           [eventData]="eventData"
+           (eventDone)="completeEvent()"></app-cheer>
+<app-follow></app-follow>
+<app-giftbomb></app-giftbomb>
+<app-giftsub></app-giftsub>
+<app-raid *ngIf="currentEvent == 'Raid'"
+          [eventData]="eventData"
+          (eventDone)="completeEvent()"></app-raid>
+<app-resub></app-resub>
+<app-sub></app-sub>
