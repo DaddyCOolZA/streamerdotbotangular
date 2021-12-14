@@ -82,6 +82,15 @@ export interface CheerData {
     viewerCount: number;
 }
 
+export interface FollowData {
+    displayName: string;
+    profileImage: string;
+    role: number;
+    userId: number;
+    userName: string;
+    viewerCount: number;
+}
+
 export interface RaidData {
     displayName: string;
     profileImage: string;

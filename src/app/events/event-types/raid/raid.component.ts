@@ -14,10 +14,10 @@ export class RaidComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.handleRaid();
+    this.handleAlert();
   }
 
-  handleRaid() {
+  handleAlert() {
     this.playAudio();
     setTimeout(() => {
       this.eventDone.emit('done');
