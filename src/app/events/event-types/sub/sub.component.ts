@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ReSubData } from 'src/app/models/alerts.model';
+import { SubData } from 'src/app/models/alerts.model';
 
 @Component({
   selector: 'app-sub',
@@ -7,7 +7,7 @@ import { ReSubData } from 'src/app/models/alerts.model';
   styleUrls: ['./sub.component.scss']
 })
 export class SubComponent implements OnInit {
-  @Input() eventData: ReSubData;
+  @Input() eventData: SubData;
   @Output() eventDone = new EventEmitter<string>();
 
   eventDuration = 10000;
